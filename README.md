@@ -1,10 +1,12 @@
 # Traffic Handler Docker
 
 ## Informationen
-Der Traffic Handler von ERR-Fire. Ein System welches dafür sorgt, dass die Verkehrsbehinderungen, 
-Langzeit Baustellen oder ähnliches in einem System Dokumentiert und angezeigt werden. So kann schon
-während der Anfahrt zu Einsatzstelle, der beste Weg herausgesucht werden. Durch eine Benutzerverwaltung,
-können User dedizierte Schreib oder nur Leserechte vergeben werden. So ist die Integrität der Daten sicher. 
+Der Traffic Handler von ERR-Fire verkörpert ein innovatives System, das dazu konzipiert ist, Verkehrsbeeinträchtigungen, langfristige Baustellen und vergleichbare Hindernisse akribisch zu erfassen und transparent darzustellen. Durch die umfassende Dokumentation dieser Faktoren ermöglicht das System eine optimierte Routenplanung bereits im Vorfeld der Anfahrt zur Einsatzstelle.
+
+Ein essentieller Aspekt dieses Systems ist die Benutzerverwaltung, welche eine präzise Steuerung der Zugriffsrechte ermöglicht. Diese differenzierten Berechtigungen erlauben es, einzelnen Nutzern spezifische Schreib- oder ausschließlich Leserechte zuzuweisen. Hierdurch wird die Integrität der hinterlegten Daten gewährleistet und ein Höchstmaß an Sicherheit erreicht.
+
+
+Die Daten werden zentral in einer lokalen Datenbank gespeichert, wodurch Ihnen uneingeschränkte Kontrolle über Ihre Daten gewährt wird.
 
 
 ### Environment
