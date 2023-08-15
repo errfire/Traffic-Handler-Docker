@@ -13,7 +13,6 @@ Die Daten werden zentral in einer lokalen Datenbank gespeichert, wodurch Ihnen u
 Die Ausführung dieses Containers erfordert eine "echte" Linux-Umgebung (entweder physisch oder virtuell, siehe unten).
 
 :star: Wir haben seit vielen Jahren gute Erfahrungen mit  [DeinServerHost](https://deinserverhost.de/store/aff.php?aff=3919) und ihre Root- und V-Server-Angebote gemacht.
-Sie kombinieren die Vorteile von dedizierten Root-Servern mit virtuellen Servern.
 
 Sie Suchen einen vServer oder Root-Server, dann bestellen Sie über den u.g. Link und unterstützen Sie uns. Vielen Dank.
 
