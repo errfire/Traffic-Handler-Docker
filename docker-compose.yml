@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  traffichandler_app:
+    image: errfire/traffichandler:latest
+    container_name: traffichandler_app
+    env_file:
+      - .env
+    ports:
+      - 443:443
+    volumes:
+      - ./data/traffic_handler/logs:/opt/traffic_handler/logs
+      - ./data/traffic_handler/config:/opt/traffic_handler/conf
+      - ./data/traffic_handler/data:/opt/traffic_handler/data
+      # please check host machine's timezone + localtime otherwise calendar will display wrong times
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    healthcheck:
+      test: curl --fail https://localhost/ || exit 1
+      interval: 60s
+      retries: 3
+      start_period: 60s
+      timeout: 10s
