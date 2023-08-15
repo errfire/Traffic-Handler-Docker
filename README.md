@@ -62,7 +62,7 @@ Eure Konfigurationen nehmen wir gerne unter info@err-fire.de entgegen.
 
 ## Hinweise
 
-`Deine Stadt` lässt sich über die `settings.cfg` innerhalb von `data\config` ändern.
+`Deine Stadt` lässt sich über die `settings.cfg` innerhalb von `data\conf` ändern.
 
 `ALERTKEY` lässt sich über die `.env` ändern. :warning:  Bitte auch durchführen! [Random Hash Generator](https://onlinehashtools.com/generate-random-md5-hash)
 
