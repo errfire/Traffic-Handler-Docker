@@ -44,7 +44,7 @@ Bitte wechseln Sie in den traffichandler-docker Ordner und führen Sie dann folg
 
 
 
-## SSL
+## 🔐 SSL
 
 Grundsätzlich wird der Container mit dem Port 443 exposed. Darüber hinaus ist ein Self Sign Zertifikat integriert. 
 Für den Zugriff auf ERR-FIRE nach außen, empfehlen wir das Vorschalten eines reverse Proxy. (NGINX)
@@ -66,6 +66,17 @@ Eure Konfigurationen nehmen wir gerne unter info@err-fire.de entgegen.
 `ALERTKEY` lässt sich über die `.env` ändern. :warning:  Bitte auch durchführen! [Random Hash Generator](https://onlinehashtools.com/generate-random-md5-hash)
 
 Das erstellen von Koordinaten hat sich hierüber bewehrt (https://www.gpskoordinaten.de/)
+
+## 📷 Screenshots
+![alt text](https://github.com/muffti-112/Traffic-Handler-Docker/blob/main/img/login.png)
+
+![alt text](https://github.com/muffti-112/Traffic-Handler-Docker/blob/main/img/mainview.png)
+
+![alt text](https://github.com/muffti-112/Traffic-Handler-Docker/blob/main/img/entry.png)
+
+![alt text](https://github.com/muffti-112/Traffic-Handler-Docker/blob/main/img/delte.png)
+
+![alt text](https://github.com/muffti-112/Traffic-Handler-Docker/blob/main/img/usermanagment.png)
 
 ## Wir sagen Danke
 
