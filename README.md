@@ -66,7 +66,7 @@ Eure Konfigurationen nehmen wir gerne unter info@err-fire.de entgegen.
 
 `ALERTKEY` lässt sich über die `.env` ändern. :warning:  Bitte auch durchführen! [Random Hash Generator](https://onlinehashtools.com/generate-random-md5-hash)
 
-Das erstellen von Koordinaten, hat sich hierüber bewehrt (https://www.gpskoordinaten.de/)
+Das erstellen von Koordinaten hat sich hierüber bewehrt (https://www.gpskoordinaten.de/)
 
 ## Wir sagen Danke
 
