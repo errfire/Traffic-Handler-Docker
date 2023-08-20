@@ -7,7 +7,7 @@ services:
     ports:
       - 443:443
     environment:
-      - TZ=Amsterdam/Berlin
+      - TZ=Europa/Berlin
     volumes:
       - ./data/traffic_handler/logs:/opt/traffic_handler/logs
       - ./data/traffic_handler/data:/opt/traffic_handler/data
