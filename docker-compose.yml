@@ -6,6 +6,7 @@ services:
     container_name: traffichandler_app
     ports:
       - 443:443
+      - 80:80
     environment:
       - TZ=Europa/Berlin
     volumes:
