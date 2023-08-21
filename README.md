@@ -1,5 +1,7 @@
 # Traffic Handler Docker
 
+## BETA Version. Bitte aktuell nur zu Testzwecken nutzen. Nicht Produktiv schalten.
+
 ## Informationen
 Der Traffic Handler von ERR-Fire verkörpert ein innovatives System, das dazu konzipiert ist, Verkehrsbeeinträchtigungen, langfristige Baustellen und vergleichbare Hindernisse zu erfassen und transparent darzustellen. Durch die umfassende Dokumentation dieser Faktoren ermöglicht das System eine optimierte Routenplanung bereits im Vorfeld der Anfahrt zur Einsatzstelle.
 Ein essentieller Aspekt dieses Systems ist die Benutzerverwaltung, welche eine präzise Steuerung der Zugriffsrechte ermöglicht. Diese differenzierten Berechtigungen erlauben es, einzelnen Nutzern spezifische Schreib- oder ausschließlich Leserechte zuzuweisen. Hierdurch wird die Integrität der hinterlegten Daten gewährleistet und ein Höchstmaß an Sicherheit erreicht.
@@ -30,14 +32,19 @@ Docker Desktop für Windows (Windows Linux Subsystem (WSL2)) wird ebenfalls unte
 
 ### Upgrades
 
-Sobald es eine neue Version gibt, werden Sie auf der Hauptseite darüber informiert mit einem Pop-Up.
+Sobald es eine neue Version gibt, werden Sie auf der Hauptseite des Traffic Handlers darüber informiert mit einem Pop-Up.
 Sollten Sie ein Update durchführen wollen, gehen Sie wie folgt vor:
 
 Bitte wechseln Sie in den traffichandler-docker Ordner und führen Sie dann folgendes aus:
 
+Downloaden Sie sich unter GitHub oder auf unserer Projektseite die neuste Version herunter.
+Führen Sie folgende Kommandos aus:
+
 `docker-compose down`
 
-`docker image rm errfire/traffichandler `
+Platzieren Sie die neue docker-compose.yml.
+
+Führen Sie folgende Kommandos aus:
 
 `docker-compose up -d`
 
@@ -45,11 +52,13 @@ Bitte wechseln Sie in den traffichandler-docker Ordner und führen Sie dann folg
 
 ## 🔐 SSL
 
-Grundsätzlich wird der Container mit dem Port 443 exposed. Darüber hinaus ist ein Self Sign Zertifikat integriert. 
-Für den Zugriff auf ERR-FIRE nach außen, empfehlen wir das Vorschalten eines reverse Proxy. (NGINX)
+Grundsätzlich wird der Container mit dem Port 443 und 80 exposed. Darüber hinaus ist ein Self Sign Zertifikat integriert. 
+Wahlweise kann auch der Port 80 verwendet werden. Hierfür passen Sie die settings.cfg Datei an.
+
+Für den Zugriff auf den Traffic Handler nach außen, empfehlen wir das Vorschalten eines reverse Proxy. (NGINX)
 
 Wir planen in einer der nächsten Versionen, das ganze einzubinden. Aktuell ist aber die Community gefragt.
-Eure Konfigurationen nehmen wir gerne unter info@err-fire.de entgegen. 
+Eure Konfigurationen nehmen wir gerne unter info@err-fire.de entgegen. :-)
 
 ## Erster Start
 - Installiere Docker und Docker Compose in der letzten Version
@@ -62,7 +71,7 @@ Eure Konfigurationen nehmen wir gerne unter info@err-fire.de entgegen.
 
 `Deine Stadt` lässt sich über die `settings.cfg` innerhalb von `data\conf` ändern.
 
-`ALERTKEY` lässt sich über die `.env` ändern. :warning:  Bitte auch durchführen! [Random Hash Generator](https://onlinehashtools.com/generate-random-md5-hash)
+`ALERTKEY` wird bei jedem neuen deploy, neu generiert.
 
 Das erstellen von Koordinaten hat sich hierüber bewehrt (https://www.gpskoordinaten.de/)
 
@@ -79,10 +88,9 @@ Das erstellen von Koordinaten hat sich hierüber bewehrt (https://www.gpskoordin
 
 ## Wir sagen Danke
 
-Diese Anwendung ist in meiner Freizeit entstanden um einfach mal tiefer in die Entwicklung einzusteigen.
-Mit dem Realise ist aber noch lange nicht schluss. Jetzt ist das Feedback der Community gefragt. Ihr habt Bugs gefunden
-oder habt eine coole Idee zur Optimierung? Ihr habt ein Feature was ihr unbedingt in der Anwendung wieder finden wollt? Dann
-teilt mir das gerne im GitHub Issuer-Tracker mit oder via Mail an info@err-fire.de
+Diese Anwendung ist ein Freizeit Projekt, um ein Problem zu lösen und einfach mal tiefer in die Entwicklung einzusteigen.
+Jetzt ist das Feedback der Community gefragt. Ihr habt Bugs gefunden oder habt eine coole Idee zur Optimierung? Ihr habt ein Feature was ihr unbedingt in der Anwendung wieder finden wollt? 
+Dann teilt mir das gerne im GitHub Issuer-Tracker mit oder via Mail an info@err-fire.de
 
 Ihr wollt Danke sagen und das Projekt weiterleben lassen? Gerne hier:
 
