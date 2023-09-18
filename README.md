@@ -3,11 +3,11 @@
 ## BETA Version. Bitte aktuell nur zu Testzwecken nutzen. Nicht Produktiv schalten.
 
 ## Informationen
-Der Traffic Handler von ERR-Fire verkörpert ein innovatives System, das dazu konzipiert ist, Verkehrsbeeinträchtigungen, langfristige Baustellen und vergleichbare Hindernisse zu erfassen und transparent darzustellen. Durch die umfassende Dokumentation dieser Faktoren ermöglicht das System eine optimierte Routenplanung bereits im Vorfeld der Anfahrt zur Einsatzstelle.
+Der Traffic Handler verkörpert ein innovatives System, das dazu konzipiert ist, Verkehrsbeeinträchtigungen, langfristige Baustellen und vergleichbare Hindernisse zu erfassen und transparent darzustellen. Durch die umfassende Dokumentation dieser Faktoren ermöglicht das System eine optimierte Routenplanung bereits im Vorfeld der Anfahrt zur Einsatzstelle.
 Ein essentieller Aspekt dieses Systems ist die Benutzerverwaltung, welche eine präzise Steuerung der Zugriffsrechte ermöglicht. Diese differenzierten Berechtigungen erlauben es, einzelnen Nutzern spezifische Schreib- oder ausschließlich Leserechte zuzuweisen. Hierdurch wird die Integrität der hinterlegten Daten gewährleistet und ein Höchstmaß an Sicherheit erreicht.
 
 
-Die Daten werden zentral in einer lokalen Datenbank gespeichert, wodurch Ihnen uneingeschränkte Kontrolle über Ihre Daten gewährt wird.
+Die Daten werden zentral in einer lokalen Datenbank gespeichert, wodurch uneingeschränkte Kontrolle und Datenhoheit über die Daten gewährt wird.
 
 
 ### Environment
@@ -33,6 +33,7 @@ Docker Desktop für Windows (Windows Linux Subsystem (WSL2)) wird ebenfalls unte
 ### Upgrades
 
 Sobald es eine neue Version gibt, werden Sie auf der Hauptseite des Traffic Handlers darüber informiert mit einem Pop-Up.
+Beobachten Sie alternativ gerne unsere Projektseite traffichandler.de
 Sollten Sie ein Update durchführen wollen, gehen Sie wie folgt vor:
 
 Bitte wechseln Sie in den traffichandler-docker Ordner und führen Sie dann folgendes aus:
@@ -43,6 +44,7 @@ Führen Sie folgende Kommandos aus:
 `docker-compose down`
 
 Platzieren Sie die neue docker-compose.yml.
+Löschen Sie das aktuelle Docker Image
 
 Führen Sie folgende Kommandos aus:
 
@@ -59,6 +61,8 @@ Für den Zugriff auf den Traffic Handler nach außen, empfehlen wir das Vorschal
 
 Wir planen in einer der nächsten Versionen, das ganze einzubinden. Aktuell ist aber die Community gefragt.
 Eure Konfigurationen nehmen wir gerne unter info@err-fire.de entgegen. :-)
+
+⚠️ Bitte bachte das es sich um eine BETA-Version handelt. Wir empfehlen die Nutzung  einer VPN-Verbindung.
 
 ## Erster Start
 - Installiere Docker und Docker Compose in der letzten Version
@@ -88,8 +92,8 @@ Das erstellen von Koordinaten hat sich hierüber bewehrt (https://www.gpskoordin
 
 ## Wir sagen Danke
 
-Diese Anwendung ist ein Freizeit Projekt, um ein Problem zu lösen und einfach mal tiefer in die Entwicklung einzusteigen.
-Jetzt ist das Feedback der Community gefragt. Ihr habt Bugs gefunden oder habt eine coole Idee zur Optimierung? Ihr habt ein Feature was ihr unbedingt in der Anwendung wieder finden wollt? 
+Diese Anwendung ist ein Freizeitprojekt, um ein Problem zu lösen und einfach mal tiefer in die Entwicklung einzusteigen.
+Jetzt ist das Feedback der Community gefragt. Ihr habt Bugs gefunden oder habt eine coole Idee zur Optimierung? Ihr habt ein Feature was ihr unbedingt in der Anwendung wiederfinden wollt? 
 Dann teilt mir das gerne im GitHub Issuer-Tracker mit oder via Mail an info@err-fire.de
 
 Ihr wollt Danke sagen und das Projekt weiterleben lassen? Gerne hier:
