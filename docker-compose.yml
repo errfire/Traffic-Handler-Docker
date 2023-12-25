@@ -1,16 +1,35 @@
 version: "3.7"
 
 services:
-  traffichandler_app:
-    image: errfire/traffichandler:0.5.0-Beta
-    container_name: traffichandler_app
-    ports:
-      - 443:443
-      - 80:80
-    environment:
-      - TZ=Europa/Berlin
-    volumes:
-      - ./data/traffic_handler/logs:/opt/traffic_handler/logs
-      - ./data/traffic_handler/data:/opt/traffic_handler/data
-      - ./data/traffic_handler/conf:/opt/traffic_handler/conf
-      - ./data/traffic_handler/database:/opt/traffic_handler/system/de.err.traffichandler/instance
+     Nginx:
+        container_name: traffichandler_nginx
+        image: nginx:latest
+        ports:
+          - 443:443
+          - 80:80
+        volumes:
+          - ./NGINX/conf/nginx.conf:/etc/nginx/conf.d/default.conf
+          - ./NGINX/conf/certification:/etc/nginx
+          - ./NGINX/conf/date:/etc/nginx/date
+          - ./NGINX/logs:/var/log/nginx
+          - ./NGINX/default/nginx.conf:/etc/nginx/nginx.conf
+        networks:
+          - traffichandler_Network
+    app:
+        image: errfire/traffichandler:0.7.0-Beta
+        container_name: traffichandler_app
+        environment:
+          - TZ=Europa/Berlin
+        networks:
+          - traffichandler_Network
+
+        volumes:
+          - ./data/traffic_handler/logs:/opt/traffic_handler/logs
+          - ./data/traffic_handler/data:/opt/traffic_handler/data
+          - ./data/traffic_handler/conf:/opt/traffic_handler/conf
+          - ./data/traffic_handler/database:/opt/traffic_handler/system/de.err.traffichandler/instance
+        env_file:
+          - iam.env
+networks:
+  traffichandler_Network:
+    driver: bridge
