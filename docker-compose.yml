@@ -1,4 +1,7 @@
 version: "3.7"
+#ERR Fire
+#Traffichandler
+#Version: 0.8.0-Beta
 
 services:
     Nginx:
@@ -15,8 +18,14 @@ services:
           - ./NGINX/default/nginx.conf:/etc/nginx/nginx.conf
         networks:
           - traffichandler_Network
+        healthcheck:
+          test: [ "CMD", "curl", "-f", "http://app/rest/health" ]
+          interval: 1m30s
+          timeout: 10s
+          retries: 3
+          start_period: 40s
     app:
-        image: errfire/traffichandler:0.7.0-Beta
+        image: errfire/traffichandler:0.8.0-Beta
         container_name: traffichandler_app
         environment:
           - TZ=Europa/Berlin
@@ -27,9 +36,11 @@ services:
           - ./data/traffic_handler/logs:/opt/traffic_handler/logs
           - ./data/traffic_handler/data:/opt/traffic_handler/data
           - ./data/traffic_handler/conf:/opt/traffic_handler/conf
+          - ./data/traffic_handler/PDF:/opt/traffic_handler/PDF
+          - ./data/traffic_handler/includes/construction:/opt/traffic_handler/includes/construction
+          - ./data/traffic_handler/includes/csv:/opt/traffic_handler/includes/csv
           - ./data/traffic_handler/database:/opt/traffic_handler/system/de.err.traffichandler/instance
-        env_file:
-          - iam.env
+
 networks:
   traffichandler_Network:
     driver: bridge

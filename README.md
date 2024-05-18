@@ -7,4 +7,4 @@ Es handelt sich hier um das Konfigurationspaket für eine Docker-Installation.
 
 Bitte lesen Sie sich vor Inbetriebnahem die Dokumentation aufmerksam durch.
 
-[Dokumentation](https://doc.err-fire.de/docs)
+[Dokumentation](https://wiki.err-fire.de/docs)
